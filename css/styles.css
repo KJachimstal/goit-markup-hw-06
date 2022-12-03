@@ -19,6 +19,7 @@
     --bodyWindowBackgroundColor: rgba(0, 0, 0, 0.2);
     --closeButtonBorderColor: rgba(0, 0, 0, 0.1);
     --portfolioOverlayColor: rgba(33, 150, 243, 0.9);
+    --newsletterTextColor: rgba(255, 255, 255, 0.6);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -194,7 +195,7 @@ body {
     gap: 70px;
 }
 
-.footer-list li:first-child a{
+.footer-list li:first-child a {
     color: var(--whiteColor);
 }
 
@@ -227,7 +228,7 @@ body {
     color: var(--footerContactColor);
 }
 
-.footer-social_media-title {
+.footer-title {
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
@@ -264,6 +265,40 @@ body {
 .footer-social_media-container:focus {
     background-color: var(--mainPageColor);
 }
+
+.newsletter form {
+    display: flex;
+    gap: 12px;
+}
+
+.newsletter input {
+    padding: 15px 0 15px 16px;
+    background-color: var(--bannerBackgroundColor);
+    color: var(--newsletterTextColor);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    min-width: 358px;
+}
+
+.newsletter button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background: var(--mainPageColor);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 200px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--whiteColor);
+}
+
+
 
 /*-------------------------------------- BANNER STLES --------------------------------------*/
 
@@ -490,7 +525,7 @@ body {
     transition-property: fill;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-    
+
 }
 
 .crew-item-social_media-container {
@@ -617,7 +652,7 @@ body {
 
 .portfolio-item {
     display: block;
-    transition-property: box-shadow; 
+    transition-property: box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }

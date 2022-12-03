@@ -670,7 +670,7 @@
                     </address>
                 </div>
                 <div class="footer-social_media">
-                    <p class="footer-social_media-title">Dołącz do nas</p>
+                    <p class="footer-title">Dołącz do nas</p>
                     <ul class="footer-social_media-list">
                         <li>
                             <a
@@ -733,6 +733,29 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="newsletter">
+                    <p class="footer-title">Zapisz się do newslettera</p>
+                    <form name="newsletter-form">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="E-mail"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            required
+                        />
+                        <button type="submit">
+                            Zapisz się
+                            <svg
+                                class="newsletter-icon"
+                                alt="send icon"
+                                width="24"
+                                height="24"
+                            >
+                                <use href="./images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
         </footer>
