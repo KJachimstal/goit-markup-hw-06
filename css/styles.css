@@ -20,6 +20,7 @@
     --closeButtonBorderColor: rgba(0, 0, 0, 0.1);
     --portfolioOverlayColor: rgba(33, 150, 243, 0.9);
     --newsletterTextColor: rgba(255, 255, 255, 0.6);
+    --formPlaceholderColor: rgba(117, 117, 117, 0.5);
 }
 
 /*-------------------------------------- GLOBAL STLES --------------------------------------*/
@@ -457,10 +458,41 @@ body {
     padding: 12px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    resize: none;
+}
+
+.contact-form-group textarea::placeholder {
+    color: var(--formPlaceholderColor);
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    outline: 1px solid #2196F3;
 }
 
 .contact-form-group textarea[name="comment"] {
     margin-bottom: 20px;
+}
+
+.contact-form-group input {
+    padding-left: 42px;
+}
+
+.contact-form-group label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-form-group span {
+    margin-bottom: 4px;
+}
+
+.form-icon {
+    position: absolute;
+    left: 12px;
+    bottom: 22px;
+    fill: var(--secondaryPageColor);
 }
 
 /*-------------------------------------- DESCRIPTION STLES --------------------------------------*/

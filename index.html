@@ -770,18 +770,53 @@
                     <form name="contact-form" class="modal-contact">
                         <p>Zostaw swoje dane w formularzu poniżej</p>
                         <div class="contact-form-group" role="group">
-                            <label for="name"> Imię </label>
-                            <input name="name" type="text" id="name" required />
-                            <label for="phone"> Telefon </label>
-                            <input name="phone" type="tel" id="phone" required />
-                            <label for="email"> E-mail </label>
-                            <input
-                                name="email"
-                                type="email"
-                                id="email"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                                required
-                            />
+                            <label for="name">
+                                <span>Imię</span>
+                                <svg
+                                    class="form-icon"
+                                    alt="person icon"
+                                    width="18"
+                                    height="18"
+                                >
+                                    <use
+                                        href="./images/icons.svg#icon-person"
+                                    ></use>
+                                </svg>
+                                <input name="name" type="text" required />
+                            </label>
+                            <label for="phone">
+                                <span>Telefon</span>
+                                <svg
+                                    class="form-icon"
+                                    alt="phone icon"
+                                    width="18"
+                                    height="18"
+                                >
+                                    <use
+                                        href="./images/icons.svg#icon-phone"
+                                    ></use>
+                                </svg>
+                                <input name="phone" type="tel" required />
+                            </label>
+                            <label for="email">
+                                <span>E-mail</span>
+                                <svg
+                                    class="form-icon"
+                                    alt="email icon"
+                                    width="18"
+                                    height="18"
+                                >
+                                    <use
+                                        href="./images/icons.svg#icon-email"
+                                    ></use>
+                                </svg>
+                                <input
+                                    name="email"
+                                    type="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                    required
+                                />
+                            </label>
                             <label for="comment"> Komentarz </label>
                             <textarea
                                 name="comment"
@@ -792,7 +827,12 @@
                             ></textarea>
                         </div>
                         <label for="reg">
-                            <input name="reg" type="checkbox" id="reg" required />
+                            <input
+                                name="reg"
+                                type="checkbox"
+                                id="reg"
+                                required
+                            />
                             Oświadczam iż akceptuję
                             <a href="#">Regulamin</a>
                             i
