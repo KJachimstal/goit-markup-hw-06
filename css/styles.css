@@ -267,11 +267,6 @@ body {
     background-color: var(--mainPageColor);
 }
 
-.newsletter form {
-    display: flex;
-    gap: 12px;
-}
-
 .newsletter input {
     padding: 15px 0 15px 16px;
     background-color: var(--bannerBackgroundColor);
@@ -299,7 +294,14 @@ body {
     color: var(--whiteColor);
 }
 
+.newsletter-icon {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
+.newsletter-container {
+    display: flex;
+    gap: 12px;
+}
 
 /*-------------------------------------- BANNER STLES --------------------------------------*/
 
@@ -381,6 +383,7 @@ body {
 .backdrop {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--bodyWindowBackgroundColor);
@@ -450,6 +453,9 @@ body {
     letter-spacing: 0.01em;
     color: var(--contactColor);
     margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .contact-form-group input,
@@ -470,18 +476,17 @@ body {
     outline: 1px solid #2196F3;
 }
 
+.contact-form-group input:focus + .form-icon,
+.contact-form-group textarea:focus + .form-icon {
+    fill: var(--mainPageColor);
+}
+
 .contact-form-group textarea[name="comment"] {
     margin-bottom: 20px;
 }
 
 .contact-form-group input {
     padding-left: 42px;
-}
-
-.contact-form-group label {
-    display: flex;
-    flex-direction: column;
-    position: relative;
 }
 
 .contact-form-group span {
@@ -554,7 +559,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 27px 0;
     color: var(--whiteColor);
     font-weight: 700;
     line-height: 1.14;
@@ -708,6 +712,7 @@ body {
     background: var(--buttonColor);
     color: var(--secondaryPageColor);
     padding: 6px 22px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     transition-property: background-color, color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
@@ -717,7 +722,6 @@ body {
 .portfolio button:focus {
     color: var(--whiteColor);
     background: var(--mainPageColor);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-bottons-list {

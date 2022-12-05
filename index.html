@@ -734,29 +734,33 @@
                         </li>
                     </ul>
                 </div>
-                <div class="newsletter">
-                    <p class="footer-title">Zapisz się do newslettera</p>
-                    <form name="newsletter-form">
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="E-mail"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                            required
-                        />
-                        <button type="submit">
-                            Zapisz się
-                            <svg
-                                class="newsletter-icon"
-                                alt="send icon"
-                                width="24"
-                                height="24"
-                            >
-                                <use href="./images/icons.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+                <form name="newsletter-form" class="newsletter">
+                    <label for="email">
+                        <p class="footer-title">Zapisz się do newslettera</p>
+                        <div class="newsletter-container">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="E-mail"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                required
+                            />
+                            <button type="submit">
+                                Zapisz się
+                                <svg
+                                    class="newsletter-icon"
+                                    alt="send icon"
+                                    width="24"
+                                    height="24"
+                                >
+                                    <use
+                                        href="./images/icons.svg#icon-send"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </label>
+                </form>
             </div>
         </footer>
         <div class="backdrop is-hidden" data-modal>
@@ -772,6 +776,7 @@
                         <div class="contact-form-group" role="group">
                             <label for="name">
                                 <span>Imię</span>
+                                <input name="name" type="text" required />
                                 <svg
                                     class="form-icon"
                                     alt="person icon"
@@ -782,10 +787,10 @@
                                         href="./images/icons.svg#icon-person"
                                     ></use>
                                 </svg>
-                                <input name="name" type="text" required />
                             </label>
                             <label for="phone">
                                 <span>Telefon</span>
+                                <input name="phone" type="tel" required />
                                 <svg
                                     class="form-icon"
                                     alt="phone icon"
@@ -796,10 +801,15 @@
                                         href="./images/icons.svg#icon-phone"
                                     ></use>
                                 </svg>
-                                <input name="phone" type="tel" required />
                             </label>
                             <label for="email">
                                 <span>E-mail</span>
+                                <input
+                                    name="email"
+                                    type="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                    required
+                                />
                                 <svg
                                     class="form-icon"
                                     alt="email icon"
@@ -810,12 +820,6 @@
                                         href="./images/icons.svg#icon-email"
                                     ></use>
                                 </svg>
-                                <input
-                                    name="email"
-                                    type="email"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                                    required
-                                />
                             </label>
                             <label for="comment"> Komentarz </label>
                             <textarea
